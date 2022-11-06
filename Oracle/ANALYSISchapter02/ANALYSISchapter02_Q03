@@ -1,0 +1,6 @@
+SELECT      department_id,
+            employee_id,
+            first_name,
+            salary,
+            SUM(salary) OVER(PARTITION BY department_id ORDER BY salary ASC rows between unbounded preceding and current row) AS "CUMSAL"
+FROM        hr.employees;
