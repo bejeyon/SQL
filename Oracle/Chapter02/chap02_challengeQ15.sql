@@ -4,4 +4,4 @@ SELECT      last_name,
             commission_pct 
 FROM        hr.employees 
 WHERE       NOT(commission_pct IS NULL) 
-ORDER BY    salary DESC
+ORDER BY    salary DESC;
