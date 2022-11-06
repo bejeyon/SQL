@@ -7,4 +7,4 @@ SELECT      job_id  AS  "Job",
                 END)    AS "Dept 50", 
             SUM(salary)    AS "Total" 
 FROM        hr.employees 
-GROUP BY    job_id
+GROUP BY    job_id;
