@@ -4,4 +4,4 @@ SELECT          location_id,
                 state_province,
                 country_name
 FROM            hr.LOCATIONS
-NATURAL JOIN    hr.COUNTRIES;
+NATURAL JOIN    hr.COUNTRIES
