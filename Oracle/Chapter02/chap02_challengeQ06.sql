@@ -3,4 +3,4 @@ SELECT  last_name,
         hire_date 
 FROM    hr.employees 
 WHERE   last_name IN ( 'Matos', 'Taylor' ) 
-ORDER BY    hire_date ASC
+ORDER BY    hire_date ASC;
