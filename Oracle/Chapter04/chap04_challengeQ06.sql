@@ -4,4 +4,4 @@ SELECT      last_name,
             WHEN    60  THEN    salary*1.1     
             ELSE                salary 
 END)        AS "REVISED_SALARY" 
-FROM        hr.employees
+FROM        hr.employees;
