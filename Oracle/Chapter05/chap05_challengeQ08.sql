@@ -1,2 +1,2 @@
 SELECT      MAX(salary)-MIN(salary) AS "DIFFERENCE" 
-FROM        hr.employees
+FROM        hr.employees;
