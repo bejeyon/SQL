@@ -1,3 +1,3 @@
 SELECT  last_name 
 FROM    hr.employees 
-WHERE   last_name   LIKE    '__a%'
+WHERE   last_name   LIKE    '__a%';
