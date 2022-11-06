@@ -1,0 +1,9 @@
+SELECT      manager_id,
+            job_id,
+            SUM(salary),
+            GROUPING(manager_id),
+            GROUPING(job_id)
+FROM        hr.EMPLOYEES
+WHERE       manager_id < 120
+AND         NOT(manager_id IS NULL)
+GROUP BY    CUBE(manager_id, job_id);
