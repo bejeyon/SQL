@@ -1,0 +1,7 @@
+SELECT      NVL(manager_id, 0),
+            job_id,
+            SUM(salary)
+FROM        hr.EMPLOYEES
+WHERE       manager_id < 120
+AND         manager_id <> 0
+GROUP BY    ROLLUP(manager_id, job_id);
