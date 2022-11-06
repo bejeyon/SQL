@@ -1,0 +1,6 @@
+SELECT      department_id,
+            manager_id,
+            job_id,
+            SUM(salary)
+FROM        hr.EMPLOYEES
+GROUP BY    GROUPING SETS((department_id, manager_id, job_id), (department_id, job_id), (manager_id, job_id));
