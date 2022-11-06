@@ -4,4 +4,4 @@ SELECT  department_id,
 FROM    hr.employees
 WHERE   department_id = (SELECT department_id
                         FROM    hr.departments
-                        WHERE   department_name LIKE '%Executive%');
+                        WHERE   department_name LIKE '%Executive%')
