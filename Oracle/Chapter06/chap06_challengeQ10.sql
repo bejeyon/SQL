@@ -5,4 +5,4 @@ INNER JOIN      hr.employees e
 ON              d.department_id = e.department_id 
 WHERE           d.department_name IN ('Administration', 'Executive') 
 GROUP BY        e.job_id
-ORDER BY        2 DESC
+ORDER BY        2 DESC;
