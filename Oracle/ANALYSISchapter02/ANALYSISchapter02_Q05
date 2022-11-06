@@ -1,0 +1,2 @@
+SELECT      PERCENTILE_DISC(0.1) WITHIN GROUP(ORDER BY salary DESC) AS DISC
+FROM        hr.employees;
