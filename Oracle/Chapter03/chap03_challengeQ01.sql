@@ -1,2 +1,2 @@
 SELECT  SYSDATE AS "DATE" 
-FROM    dual
+FROM    dual;
