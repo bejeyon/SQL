@@ -3,4 +3,4 @@ SELECT      last_name,
 DECODE(     NVL(commission_pct, 0), 
             0,    'No', 
                     'YES') AS "commission" 
-FROM        hr.employees
+FROM        hr.employees;
