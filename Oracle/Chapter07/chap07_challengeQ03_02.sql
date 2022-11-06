@@ -3,4 +3,4 @@ SELECT      employee_id,
 FROM        hr.employees
 WHERE       department_id IN(SELECT department_id
                             FROM    hr.employees
-                            WHERE   last_name LIKE '%x%')
+                            WHERE   last_name LIKE '%x%');
