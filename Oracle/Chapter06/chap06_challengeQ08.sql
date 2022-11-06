@@ -5,4 +5,4 @@ SELECT          worker.last_name AS "LAST_NAME",
 FROM            hr.employees worker
 INNER JOIN      hr.employees manager
 ON              worker.manager_id = manager.employee_id
-WHERE           worker.hire_date < manager.hire_date
+WHERE           worker.hire_date < manager.hire_date;
