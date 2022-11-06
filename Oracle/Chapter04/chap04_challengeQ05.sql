@@ -7,4 +7,4 @@ SELECT      job_id,
             WHEN    'ST_CLERK'  THEN    'E' 
             ELSE                '0' 
 END)        AS "GRADE" 
-FROM        hr.employees;
+FROM        hr.employees
