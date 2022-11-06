@@ -3,4 +3,4 @@ SELECT      last_name,
             WHEN    '0'   THEN  'No Commission' 
             ELSE                TO_CHAR(NVL(commission_pct, 0)) 
 END)        AS "COMM" 
-FROM        hr.employees
+FROM        hr.employees;
