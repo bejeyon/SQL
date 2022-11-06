@@ -1,0 +1,5 @@
+SELECT      hire_date,
+            salary,
+            ROUND(AVG(salary) OVER(ORDER BY hire_date rows between 2 preceding and current row)) AS "AVGSAL"
+FROM        hr.employees
+WHERE       TO_CHAR(hire_date, 'YYYY') = '2008';
