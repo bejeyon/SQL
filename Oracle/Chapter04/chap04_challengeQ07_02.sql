@@ -3,4 +3,4 @@ SELECT      last_name,
 DECODE(     commission_pct, 
             NULL,    'No', 
                     'YES') AS "commission" 
-FROM        hr.employees
+FROM        hr.employees;
