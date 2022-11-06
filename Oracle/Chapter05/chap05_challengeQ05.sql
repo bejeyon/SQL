@@ -4,4 +4,4 @@ SELECT      job_id,
             ROUND(SUM(salary)) AS "Sum", 
             ROUND(AVG(salary)) AS "Average" 
 FROM        hr.employees 
-GROUP BY    job_id
+GROUP BY    job_id;
