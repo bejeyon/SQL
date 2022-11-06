@@ -1,0 +1,7 @@
+SELECT      department_id,
+            last_name,
+            salary,
+            commission_pct,
+            RANK() OVER(ORDER BY salary DESC, commission_pct DESC) AS "Rank"
+FROM        hr.employees
+WHERE       department_id = 80;
