@@ -3,4 +3,4 @@ SELECT          last_name,
                 department_name
 FROM            hr.employees e
 INNER JOIN      hr.departments d
-on              (e.department_id = d.department_id)
+on              (e.department_id = d.department_id);
