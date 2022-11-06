@@ -4,4 +4,4 @@ SELECT  last_name,
 FROM    hr.employees
 WHERE   department_id = ANY(SELECT  department_id
                             FROM    hr.departments
-                            WHERE   location_id = 1700);
+                            WHERE   location_id = 1700)
