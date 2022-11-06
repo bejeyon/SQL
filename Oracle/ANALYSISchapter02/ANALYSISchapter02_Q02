@@ -1,0 +1,8 @@
+SELECT      employee_id,
+            first_name,
+            hire_date,
+            salary,
+            SUM(salary) OVER(ORDER BY hire_date rows between unbounded preceding and current row) AS "CUMSAL"
+FROM        hr.employees
+WHERE       department_id = 50
+ORDER BY    hire_date ASC;
