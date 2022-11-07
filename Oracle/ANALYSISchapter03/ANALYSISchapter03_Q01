@@ -1,0 +1,6 @@
+SELECT              last_name,
+                    salary,
+                    department_id
+FROM                hr.employees
+START WITH          last_name = 'Mourgos'
+CONNECT BY PRIOR    employee_id = manager_id;
