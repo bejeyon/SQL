@@ -1,0 +1,6 @@
+SELECT              LPAD(last_name, LENGTH(last_name)+level*2-2, '_') AS "NAME",
+                    manager_id AS "MGR",
+                    department_id AS "DEPTNO"
+FROM                hr.employees
+START WITH          last_name = 'Kochhar'
+CONNECT BY PRIOR    employee_id = manager_id;
