@@ -1,0 +1,5 @@
+SELECT              last_name
+FROM                hr.employees
+WHERE               last_name <> 'Lorentz'
+START WITH          last_name = 'Lorentz'
+CONNECT BY PRIOR    manager_id = employee_id;
