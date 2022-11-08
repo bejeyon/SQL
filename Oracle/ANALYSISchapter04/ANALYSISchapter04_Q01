@@ -2,5 +2,8 @@ SELECT  last_name,
         department_id,
         salary
 FROM    hr.employees
-WHERE   NOT(commission_pct IS NULL)
-AND     NOT(department_id IS NULL);
+WHERE   (department_id,
+        salary) IN  (SELECT department_id,
+                            salary
+                    FROM    hr.employees
+                    WHERE   NOT(commission_pct IS NULL));
