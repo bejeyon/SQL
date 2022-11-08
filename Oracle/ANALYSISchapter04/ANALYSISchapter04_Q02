@@ -1,0 +1,18 @@
+WITH    E_JOIN_D    AS(SELECT       last_name,
+                                    department_name,
+                                    salary,
+                                    NVL(commission_pct, 0) AS CPCT,
+                                    location_id
+                        FROM        hr.employees    e
+                        INNER JOIN  hr.departments  d
+                        ON          d.department_id = e.department_id)
+SELECT  last_name,
+        department_name,
+        salary
+FROM    E_JOIN_D
+WHERE   (salary,
+        CPCT) IN (SELECT    salary,
+                            CPCT
+                    FROM    E_JOIN_D
+                    WHERE   location_id = 1700)
+ORDER BY    3   DESC;
