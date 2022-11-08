@@ -1,5 +1,5 @@
 SELECT      department_name,
-            SUM(salary)
+            SUM(salary) AS "DEPT_TOTAL"
 FROM        hr.departments  d
 INNER JOIN  hr.employees    e
 ON          e.department_id = d.department_id
