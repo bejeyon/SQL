@@ -1,0 +1,5 @@
+SELECT  last_name
+FROM    hr.employees    e1
+WHERE   NOT EXISTS(SELECT   'X'
+                    FROM    hr.employees
+                    WHERE   manager_id=e1.employee_id);
