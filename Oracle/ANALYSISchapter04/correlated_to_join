@@ -1,0 +1,149 @@
+SELECT  employee_id,
+        last_name,
+        (CASE   WHEN    department_id = (SELECT department_id
+                                        FROM    hr.departments
+                                        WHERE   location_id = 1800) THEN    'Canada'
+                ELSE                                                        'USA'
+        END) AS "LOCATION"
+FROM    hr.employees;
+
+
+
+
+
+SELECT      employee_id,
+            last_name
+FROM        hr.employees e
+ORDER BY    (SELECT department_name
+            FROM    hr.departments d
+            WHERE   e.department_id = d.department_id);
+
+
+
+
+
+SELECT  last_name,
+        salary,
+        department_id
+FROM    hr.employees outer_table
+WHERE   salary > (SELECT    AVG(salary)
+                    FROM    hr.employees inner_table
+                    WHERE   inner_table.department_id = outer_table.department_id);
+            
+            
+            
+            
+                    
+SELECT  e.employee_id,
+        last_name,
+        e.job_id
+FROM    hr.employees e
+WHERE   2 <= (SELECT    COUNT(*)
+                FROM    hr.job_history
+                WHERE   employee_id = e.employee_id);
+                
+
+
+
+
+SELECT  employee_id,
+        last_name,
+        job_id,
+        department_id
+FROM    hr.employees outer
+WHERE   EXISTS(SELECT   'X'
+                FROM    hr.employees
+                WHERE   manager_id = outer.employee_id);
+
+
+
+
+
+SELECT  department_id,
+        department_name
+FROM    hr.departments d
+WHERE   NOT EXISTS(SELECT   'X'
+                    FROM    hr.employees
+                    WHERE   department_id = d.department_id);
+                    
+                    
+                    
+                    
+                    
+==========
+SELECT      e.employee_id,
+            e.last_name,
+            (CASE   WHEN    d.location_id = 1800    THEN    'Canada'
+                    ELSE                                    'USA'
+            END) AS "LOCATION"
+FROM        hr.employees e
+INNER JOIN  hr.departments d
+ON          d.department_id = e.department_id;
+
+
+
+
+
+SELECT      e.employee_id,
+            e.last_name
+FROM        hr.employees e
+INNER JOIN  hr.departments d
+ON          d.department_id = e.department_id
+ORDER BY    d.department_name;
+
+
+
+
+
+SELECT      e1.last_name,
+            e1.salary,
+            e1.department_id
+FROM        hr.employees e1
+INNER JOIN  (SELECT     department_id,
+                        AVG(salary) AS "A"
+            FROM        hr.employees
+            GROUP BY department_id) e2
+ON          e1.department_id = e2.department_id
+WHERE       e1.salary > e2.A;
+
+
+
+
+
+SELECT      e.employee_id,
+            e.last_name,
+            e.job_id
+FROM        hr.employees e
+INNER JOIN  (SELECT         employee_id,
+                            COUNT(*) AS "C"
+                FROM        hr.job_history
+                GROUP BY    employee_id) j
+ON          j.employee_id = e.employee_id
+WHERE   2 <= j.C;
+
+
+
+
+
+SELECT      distinct e1.employee_id,
+            e1.last_name,
+            e1.job_id,
+            e1.department_id
+FROM        hr.employees e1
+INNER JOIN  hr.employees e2
+ON          e2.manager_id = e1.employee_id
+ORDER BY    1;
+
+
+
+
+
+SELECT      department_id,
+            department_name
+FROM        hr.departments
+MINUS
+SELECT      d.department_id,
+            d.department_name
+FROM        hr.departments d
+INNER JOIN  hr.employees e
+ON          e.department_id = d.department_id;
