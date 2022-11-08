@@ -1,0 +1,8 @@
+SELECT      last_name,
+            job_id,
+            salary
+FROM        hr.employees
+WHERE       salary > ALL(SELECT salary
+                        FROM    hr.employees
+                        WHERE   JOB_ID = 'SA_MAN')
+ORDER BY    3   DESC;
