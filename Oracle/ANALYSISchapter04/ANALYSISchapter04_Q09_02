@@ -1,0 +1,10 @@
+WITH    SUMMARY AS(SELECT       department_name,
+                                SUM(salary) AS "DEPT_TOTAL"
+                    FROM        hr.departments  d
+                    INNER JOIN  hr.employees    e
+                    ON          e.department_id = d.department_id
+                    GROUP BY    department_name)
+SELECT  department_name, DEPT_TOTAL
+FROM    SUMMARY
+WHERE   DEPT_TOTAL > (SELECT    SUM(salary)/8
+                        FROM    hr.employees);
