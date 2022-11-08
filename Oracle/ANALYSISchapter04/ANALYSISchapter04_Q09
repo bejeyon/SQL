@@ -1,0 +1,8 @@
+SELECT      department_name,
+            SUM(salary)
+FROM        hr.departments  d
+INNER JOIN  hr.employees    e
+ON          e.department_id = d.department_id
+GROUP BY    department_name
+HAVING      SUM(salary) > (SELECT   SUM(salary)/8
+                            FROM    hr.employees);
