@@ -1,4 +1,4 @@
 CREATE TABLE hr.DEPT2(ID    NUMBER(7) PRIMARY KEY,
                       NAME  VARCHAR2(25));
 
-SELECT * FROM hr.dept2
+SELECT * FROM hr.dept2;
