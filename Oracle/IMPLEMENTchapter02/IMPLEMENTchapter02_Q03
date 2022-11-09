@@ -1,0 +1,54 @@
+INSERT into hr.MY_EMPLOYEE  (ID, 
+                            LAST_NAME, 
+                            FIRST_NAME,
+                            USERID,
+                            SALARY)
+values      (1,
+            'Patel',
+            'Ralph',
+            'rpatel',
+            895);
+            
+INSERT into hr.MY_EMPLOYEE  (ID, 
+                            LAST_NAME, 
+                            FIRST_NAME,
+                            USERID,
+                            SALARY)
+values      (2,
+            'Dancs',
+            'Betty',
+            'bdancs',
+            860);
+            
+INSERT into hr.MY_EMPLOYEE  (ID, 
+                            LAST_NAME, 
+                            FIRST_NAME,
+                            USERID,
+                            SALARY)
+values      (3,
+            'Biri',
+            'Ben',
+            'bbiri',
+            1100);
+            
+INSERT into hr.MY_EMPLOYEE  (ID, 
+                            LAST_NAME, 
+                            FIRST_NAME,
+                            USERID,
+                            SALARY)
+values      (4,
+            'Newman',
+            'Chad',
+            'cnewman',
+            750);
+            
+INSERT into hr.MY_EMPLOYEE  (ID, 
+                            LAST_NAME, 
+                            FIRST_NAME,
+                            USERID,
+                            SALARY)
+values      (5,
+            'Ropeburn',
+            'Audrey',
+            'aropebur',
+            1550);
