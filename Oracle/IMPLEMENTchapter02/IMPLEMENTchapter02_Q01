@@ -1,0 +1,5 @@
+CREATE TABLE hr.my_employee(id          NUMBER(4) PRIMARY Key, 
+                            last_name   VARCHAR2(25), 
+                            first_name  VARCHAR2(25), 
+                            userid      VARCHAR2(8), 
+                            salary      NUMBER(9,2));
