@@ -1,0 +1,3 @@
+UPDATE  hr.MY_EMPLOYEE
+set     SALARY = 1000
+where   SALARY < 900;
