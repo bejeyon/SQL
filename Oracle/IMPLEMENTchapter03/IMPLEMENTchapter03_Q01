@@ -1,4 +1,6 @@
-CREATE TABLE hr.DEPT2(ID    NUMBER(7) PRIMARY KEY,
-                      NAME  VARCHAR2(25));
+CREATE TABLE    hr.DEPT2(DEPT_ID    NUMBER(2)   PRIMARY KEY,
+                        DNAME       VARCHAR2(14),
+                        LOC         VARCHAR2(13),
+                        CREATE_DATE DATE);
 
-SELECT * FROM hr.dept2;
+SELECT * FROM   hr.DEPT2;
