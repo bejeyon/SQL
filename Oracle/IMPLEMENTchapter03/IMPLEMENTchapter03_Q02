@@ -1,4 +1,6 @@
-CREATE TABLE emp2(id          NUMBER(7),
-                  last_name   VARCHAR2(25), 
-                  first_name  VARCHAR2(25), 
-                  dept_id     NUMBER(7) CONSTRAINT emp_dept_id_FK REFERENCES dept2(id));
+CREATE TABLE    hr.EMP2(EMP_ID      NUMBER(7),
+                        LAST_NAME   VARCHAR2(25),
+                        FIRST_NAME  VARCHAR2(25),
+                        DEPT_ID     NUMBER(2)   CONSTRAINT emp_dept_id_FK   REFERENCES  DEPT2(DEPT_ID));
+
+SELECT * FROM   hr.EMP2;
