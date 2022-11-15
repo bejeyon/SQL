@@ -1,0 +1,8 @@
+CREATE VIEW hr.employees_vu
+AS
+SELECT      employee_id,
+            last_name AS employee,
+            department_id
+FROM        hr.employees;
+
+desc hr.employees_vu;
