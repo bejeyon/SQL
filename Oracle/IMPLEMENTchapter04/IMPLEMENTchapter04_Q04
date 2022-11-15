@@ -1,0 +1,8 @@
+CREATE VIEW hr.dept50
+AS
+SELECT  employee_id     AS  empno,
+        last_name       AS  employee,
+        department_id   AS  deptno
+FROM    hr.employees
+WHERE   department_id = 50
+WITH CHECK OPTION CONSTRAINT dept50_ck;
