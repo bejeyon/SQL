@@ -1,0 +1,4 @@
+DESC    hr.dept50;
+
+SELECT  *
+FROM    hr.dept50;
